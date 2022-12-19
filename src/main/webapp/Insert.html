@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>データの追加</title>
+<style type="text/css">
+	h1 {
+		border-bottom: double 5px #FFC778;
+		padding: 0.5em;/*文字周りの余白*/
+		color: #010101;/*文字色*/
+		background: #fff3ff;
+	}
+	table {
+		border-collapse: collapse;
+		background-color: #cdefff;
+	}
+	
+	table, th, td {
+		border: solid 1px #000000;
+	}
+	
+	th, td {
+		padding: 5px;
+	}
+	
+	p{
+		text-align: left;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<h1>データ追加ページ</h1>
+	<form method="get" action="insert">
+	<table>
+		<tr>
+			<th>学生用</th>
+			<th>保護者用</th>
+		</tr>
+		<tr>
+			<th><p>学籍番号<input type="number" name="id"></p></th>
+			
+		</tr>
+		<tr>
+			<th><p>在籍状態<input type="text" name="joutai"></p></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th><p>在籍状態確定日<input type="date" name="joutaiday"></p></th>
+			<th></th>
+		</tr>
+		<tr>
+			<th><p>学生氏名（漢字）<input type="text" name="simei"></p></th>
+			<th><p>保護者氏名（漢字）<input type="text" name="oyasimei"></p></th>
+		</tr>
+		<tr>
+			<th><p>学生氏名（かな）<input type="text" name="simeih"></p></th>
+			<th><p>保護者氏名（かな）<input type="text" name="oyasimeih"></p></th>
+		</tr>
+		<tr>
+			<th><p>生年月日<input type="number" name="birthday"></p></th>
+			<th> </th>
+		</tr>
+		<tr>
+			<th><p>本人郵便番号<input type="number" name="yuubinbangou"></p></th>
+			<th><p>保護者郵便番号<input type="number" name="oyayuubinbangou"></p></th>
+		</tr>
+		<tr>
+			<th><p>本人住所<input type="text" name="jusyo"></p></th>
+			<th><p>保護者住所<input type="text" name="oyajusyo"></p></th>
+		</tr>
+		<tr>
+			<th><p>本人電話番号<input type="text" name="phone"></p></th>
+			<th><p>保護者電話番号<input type="text" name="oyaphone"></p></th>
+		</tr>
+		<tr>
+			<th><p>本人メールアドレス<input type="text" name="mail"></p></th>
+			<th><p>保護者メールアドレス<input type="text" name="oyamail"></p></th>
+		</tr>
+	</table>
+	<button type="submit">送信</button>
+	</form>
+</body>
+</html>
