@@ -30,6 +30,9 @@ public class GakuseiSelect extends HttpServlet {
 			} else if(proc.equals("search")) {
 				request.getRequestDispatcher("displayall").forward(request, response);
 				return;
+			} else if(proc.equals("syosai")) {
+				request.getRequestDispatcher("syosai").forward(request, response);
+				return;
 			}
 		}
 		response.sendRedirect("displayall");
