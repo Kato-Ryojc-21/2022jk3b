@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.GakuseiDataBean;
 import dao.GakuseiDAO;
 
-@WebServlet("/display")
+@WebServlet("/displayall")
 public class Gakuseidisplay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,7 +24,7 @@ public class Gakuseidisplay extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		
-		//---get送信されるページ番号を取得する　なければ１
+		//---get送信されるページ番号を取得する　なければ１;
 		String strPage =(String) request.getParameter("page");
 		int page = 1;
 		if(strPage != null) {
@@ -51,7 +51,7 @@ public class Gakuseidisplay extends HttpServlet {
 		// キーワードを送る
 		request.setAttribute("keyword", keyword);
 		// jspに遷移
-		request.getRequestDispatcher("sampleDisplayAll.jsp").forward(request, response);
+		request.getRequestDispatcher("GakuseiDisplayAll.jsp").forward(request, response);
 	}
 
 }
