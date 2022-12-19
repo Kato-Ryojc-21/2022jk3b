@@ -32,6 +32,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 			st.setString(1, "%" + keyword + "%");
 			st.setInt(2, baseRow);
 			st.setInt(3, MAXROW);
+			System.out.println(st.toString());
 			ResultSet rs = st.executeQuery(); // ---
 
 			while (rs.next()) {
@@ -41,13 +42,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 				String gakusei_name = rs.getString("gakusei_name");
 				String gakusei_nameH = rs.getString("gakusei_nameH");
 				String born = rs.getString("born");
-				String yuubinnbangou = rs.getString("yuubinnbangou");
+				String yuubinnbanngou = rs.getString("yuubinnbanngou");
 				String gakusei_juusyo = rs.getString("gakusei_juusyo");
 				String gakusei_phone = rs.getString("gakusei_phone");
 				String gakusei_mail = rs.getString("gakusei_mail");
 				String hogosya_name = rs.getString("hogosya_name");
 				String hogosya_nameH = rs.getString("hogosya_nameH");
-				String hogosya_yuubinnbangou = rs.getString("hogosya_yuubinnbangou");
+				String hogosya_yuubinnbanngou = rs.getString("hogosya_yuubinnbanngou");
 				String hogosya_juusyo = rs.getString("hogosya_juusyo");
 				String hogosya_phone = rs.getString("hogosya_phone");
 				String hogosya_mail = rs.getString("hogosya_mail");
@@ -59,20 +60,20 @@ public class GakuseiDAO extends Conng implements Serializable {
 				b.setGakusei_name(gakusei_name);
 				b.setGakusei_nameH(gakusei_nameH);
 				b.setBorn(born);
-				b.setYuubinnbangou(yuubinnbangou);
+				b.setYuubinnbanngou(yuubinnbanngou);
 				b.setGakusei_juusyo(gakusei_juusyo);
 				b.setGakusei_phone(gakusei_phone);
 				b.setGakusei_mail(gakusei_mail);
 				b.setHogosya_name(hogosya_name);
 				b.setHogosya_nameH(hogosya_nameH);
-				b.setHogosya_yuubinnbangou(hogosya_yuubinnbangou);
+				b.setHogosya_yuubinnbanngou(hogosya_yuubinnbanngou);
 				b.setHogosya_juusyo(hogosya_juusyo);
 				b.setHogosya_phone(hogosya_phone);
 				b.setHogosya_mail(hogosya_mail);
 				data.add(b);
-
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			data = null;
 		}
 		return data;
@@ -93,13 +94,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 				String gakusei_name = rs.getString("gakusei_name");
 				String gakusei_nameH = rs.getString("gakusei_nameH");
 				String born = rs.getString("born");
-				String yuubinnbangou = rs.getString("yuubinnbangou");
+				String yuubinnbanngou = rs.getString("yuubinnbanngou");
 				String gakusei_juusyo = rs.getString("gakusei_juusyo");
 				String gakusei_phone = rs.getString("gakusei_phone");
 				String gakusei_mail = rs.getString("gakusei_mail");
 				String hogosya_name = rs.getString("hogosya_name");
 				String hogosya_nameH = rs.getString("hogosya_nameH");
-				String hogosya_yuubinnbangou = rs.getString("hogosya_yuubinnbangou");
+				String hogosya_yuubinnbanngou = rs.getString("hogosya_yuubinnbanngou");
 				String hogosya_juusyo = rs.getString("hogosya_juusyo");
 				String hogosya_phone = rs.getString("hogosya_phone");
 				String hogosya_mail = rs.getString("hogosya_mail");
@@ -111,13 +112,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 				b.setGakusei_name(gakusei_name);
 				b.setGakusei_nameH(gakusei_nameH);
 				b.setBorn(born);
-				b.setYuubinnbangou(yuubinnbangou);
+				b.setYuubinnbanngou(yuubinnbanngou);
 				b.setGakusei_juusyo(gakusei_juusyo);
 				b.setGakusei_phone(gakusei_phone);
 				b.setGakusei_mail(gakusei_mail);
 				b.setHogosya_name(hogosya_name);
 				b.setHogosya_nameH(hogosya_nameH);
-				b.setHogosya_yuubinnbangou(hogosya_yuubinnbangou);
+				b.setHogosya_yuubinnbanngou(hogosya_yuubinnbanngou);
 				b.setHogosya_juusyo(hogosya_juusyo);
 				b.setHogosya_phone(hogosya_phone);
 				b.setHogosya_mail(hogosya_mail);
@@ -145,13 +146,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 			data.setGakusei_name(rs.getString("gakusei_name"));
 			data.setGakusei_nameH(rs.getString("gakusei_nameH"));
 			data.setBorn(rs.getString("born"));
-			data.setYuubinnbangou(rs.getString("yuubinnbangou"));
+			data.setYuubinnbanngou(rs.getString("yuubinnbanngou"));
 			data.setGakusei_juusyo(rs.getString("gakusei_juusyo"));
 			data.setGakusei_phone(rs.getString("gakusei_phone"));
 			data.setGakusei_mail(rs.getString("gakusei_mail"));
 			data.setHogosya_name(rs.getString("hogosya_name"));
 			data.setHogosya_nameH(rs.getString("hogosya_nameH"));
-			data.setHogosya_yuubinnbangou(rs.getString("hogosya_yuubinnbangou"));
+			data.setHogosya_yuubinnbanngou(rs.getString("hogosya_yuubinnbanngou"));
 			data.setHogosya_juusyo(rs.getString("hogosya_juusyo"));
 			data.setHogosya_phone(rs.getString("hogosya_phone"));
 			data.setHogosya_mail(rs.getString("hogosya_mail"));
@@ -178,13 +179,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 			st.setString(3, bean.getGakusei_name());// 氏名の登録
 			st.setString(4, bean.getGakusei_nameH());
 			st.setString(5, bean.getBorn());
-			st.setString(6, bean.getYuubinnbangou());
+			st.setString(6, bean.getYuubinnbanngou());
 			st.setString(7, bean.getGakusei_juusyo());
 			st.setString(8, bean.getGakusei_phone());
 			st.setString(9, bean.getGakusei_mail());
 			st.setString(10, bean.getHogosya_name());
 			st.setString(11, bean.getHogosya_nameH());
-			st.setString(12, bean.getHogosya_yuubinnbangou());
+			st.setString(12, bean.getHogosya_yuubinnbanngou());
 			st.setString(13, bean.getHogosya_juusyo());
 			st.setString(14, bean.getHogosya_phone());
 			st.setString(15, bean.getHogosya_mail());

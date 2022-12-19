@@ -11,13 +11,13 @@ public class GakuseiDataBean implements Serializable{
 	private String gakusei_name;
 	private String gakusei_nameH;
 	private String born;
-	private String yuubinnbangou;
+	private String yuubinnbanngou;
 	private String gakusei_juusyo;
 	private String gakusei_phone;
 	private String gakusei_mail;
 	private String hogosya_name;
 	private String hogosya_nameH;
-	private String hogosya_yuubinnbangou;
+	private String hogosya_yuubinnbanngou;
 	private String hogosya_juusyo;
 	private String hogosya_phone;
 	private String hogosya_mail;
@@ -46,8 +46,8 @@ public class GakuseiDataBean implements Serializable{
 		this.born =born;
 	}
 	
-	public void setYuubinnbangou(String yuubinnbangou) {
-		this.yuubinnbangou =yuubinnbangou;
+	public void setYuubinnbanngou(String yuubinnbanngou) {
+		this.yuubinnbanngou =yuubinnbanngou;
 	}
 	
 	public void setGakusei_juusyo(String gakusei_juusyo) {
@@ -70,8 +70,8 @@ public class GakuseiDataBean implements Serializable{
 		this.hogosya_nameH =hogosya_nameH;
 	}
 	
-	public void setHogosya_yuubinnbangou(String hogosya_yuubinnbangou) {
-		this.hogosya_yuubinnbangou =hogosya_yuubinnbangou;
+	public void setHogosya_yuubinnbanngou(String hogosya_yuubinnbanngou) {
+		this.hogosya_yuubinnbanngou =hogosya_yuubinnbanngou;
 	}
 	
 	public void setHogosya_juusyo(String hogosya_juusyo) {
@@ -110,8 +110,8 @@ public class GakuseiDataBean implements Serializable{
 		return this.born;
 	}
 	
-	public String getYuubinnbangou() {
-		return this.yuubinnbangou;
+	public String getYuubinnbanngou() {
+		return this.yuubinnbanngou;
 	}
 	
 	public String getGakusei_juusyo() {
@@ -134,8 +134,8 @@ public class GakuseiDataBean implements Serializable{
 		return this.hogosya_nameH;
 	}
 	
-	public String getHogosya_yuubinnbangou() {
-		return this.hogosya_yuubinnbangou;
+	public String getHogosya_yuubinnbanngou() {
+		return this.hogosya_yuubinnbanngou;
 	}
 	
 	public String getHogosya_juusyo() {
