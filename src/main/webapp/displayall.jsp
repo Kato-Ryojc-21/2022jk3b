@@ -62,21 +62,23 @@
 			
 			<%
 		int cnt = 0;
+		
 		//-----受け取ったデータをテーブルに表示する
 		List<GakuseiDataBean> data = (ArrayList) request.getAttribute("data");
 		for (GakuseiDataBean bean : data) {
 			cnt++;
+			
+			int joutai = 0;
+			if( bean.getJoutai() == "在学"){
+				joutai = 0;
+			} else if (bean.getJoutai() == "休学"){
+				joutai = 1;
+			} else if (bean.getJoutai() == "退学"){
+				joutai = 2;
+			} else if (bean.getJoutai() == "除籍"){
+				joutai = 3;
+			}
 		
-		int joutai;
-		if( bean.getJoutai() == "在学"){
-			joutai = 0;
-		} else if (bean.getJoutai() == "休学"){
-			joutai = 1;
-		} else if (bean.getJoutai() == "退学"){
-			joutai = 2;
-		} else if (bean.getJoutai() == "除籍"){
-			joutai = 3;
-		}
 		%>
 		<tr>
 			<td><input type="radio" name="id" value="<%= bean.getId()%>" id ="radio<%= cnt %>"></td>
