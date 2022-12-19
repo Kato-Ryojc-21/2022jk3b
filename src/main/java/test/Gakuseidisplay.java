@@ -51,7 +51,7 @@ public class Gakuseidisplay extends HttpServlet {
 		// キーワードを送る
 		request.setAttribute("keyword", keyword);
 		// jspに遷移
-		request.getRequestDispatcher("GakuseiDisplayAll.jsp").forward(request, response);
+		request.getRequestDispatcher("displayall.jsp").forward(request, response);
 	}
 
 }
