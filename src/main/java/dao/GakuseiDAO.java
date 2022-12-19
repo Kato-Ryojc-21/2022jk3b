@@ -33,7 +33,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 			st.setInt(2, baseRow);
 			st.setInt(3, MAXROW);
 			System.out.println(st.toString());
-			ResultSet rs = st.executeQuery(); // ---
+			ResultSet rs = st.executeQuery(); // --
 
 			while (rs.next()) {
 				int id = rs.getInt("id");
