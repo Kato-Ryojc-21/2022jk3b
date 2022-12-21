@@ -30,6 +30,9 @@
 		text-align: left;
 	}
 	
+	.button{
+		margin-top: 20px;
+	}
 	
 </style>
 </head>
@@ -91,9 +94,11 @@
 		</tr>
 	</table>
 		<input type="hidden" name="id" value="<%=bean.getId() %>">
-		<button type="submit" name="submit" value="1">変更</button>
-		<button type="submit" name="submit" value="2">キャンセル</button>
-		<button type="reset">リセット</button>
+		<div class="button">
+			<button type="submit" name="submit" value="1">変更</button>
+			<button type="submit" name="submit" value="2">キャンセル</button>
+			<button type="reset">リセット</button>
+		</div>
 	</form>
 </body>
 </html>
