@@ -47,7 +47,7 @@ public class GakuseiSyosai extends HttpServlet {
 		} else {
 			// --- 更新用フォームを呼び出す
 			request.setAttribute("data", bean);
-			request.getRequestDispatcher("sampleSyosai.jsp").forward(request, response);
+			request.getRequestDispatcher("Syosai.jsp").forward(request, response);
 		}
 	}
 
