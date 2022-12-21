@@ -82,9 +82,11 @@ public class GakuseiDAO extends Conng implements Serializable {
 	public List<GakuseiDataBean> getData(String keyword) {
 		List<GakuseiDataBean> data = new ArrayList<GakuseiDataBean>();
 		try {
-			String sql = "select * from gakusei_master where gakusei_name like ?";
+			String sql = "select * from team_c_db.gakusei_master where gakusei_name \n"
+					+ " like ? or gakusei_nameH like ? ";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, "%" + keyword + "%");
+			st.setString(2, "%" + keyword + "%");
 			ResultSet rs = st.executeQuery();
 			
 			while (rs.next()) {
@@ -168,7 +170,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 		try {
 			String sql = "update gakusei_master set joutai=?"
 					+ " kakuteibi=? gakusei_name=? gakusei_nameH=?"
-					+ " born=? yuubinnbangou=? gakusei_juusyo=?"
+					+ " born=? yuubinnbanngou=? gakusei_juusyo=?"
 					+ " gakusei_phone=? gakusei_mail=? hogosya_name=?"
 					+ " hogosya_nameH=? hogosya_yuubinnbangou=?"
 					+ " hogosya_juusyo=? hogosya_phone=? hogosya_mail=?"
