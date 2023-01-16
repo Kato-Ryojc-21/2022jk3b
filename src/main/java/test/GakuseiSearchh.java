@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import bean.GakuseiDataBean;
 import dao.GakuseiDAO;
 
-@WebServlet("/searchk")
-public class GakuseiSearch extends HttpServlet {
+@WebServlet("/searchh")
+public class GakuseiSearchh extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public GakuseiSearch() {
+	public GakuseiSearchh() {
 		super();
 	}
 
@@ -28,7 +28,7 @@ public class GakuseiSearch extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 
 		try {
-			String keyword = request.getParameter("keyword");
+			String keyword = request.getParameter("keywordh");
 			List<GakuseiDataBean> b = new ArrayList<GakuseiDataBean>();
 			GakuseiDAO sb = new GakuseiDAO();
 			b = sb.getData(keyword);

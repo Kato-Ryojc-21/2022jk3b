@@ -16,7 +16,7 @@
 		background: #fff3ff;
 	}
 	table {
-		margin: 3px auto;
+		text-align: center;
 		border-collapse: collapse;
 		background-color: #cdefff;
 	}
@@ -30,36 +30,14 @@
 		padding: 5px;
 	}
 	
-	.menu_style{
-		width: 300px;
-		
-		
-		float: reft;
-	}
-	
-	.textBox {
-		position: relative;
-		width: 100%;
-		padding-top: 10px;
-		height: 45px;
-		display: inline-flex;
-		margin-bottom: 3vh;
-	}
-
-	.textBox ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-		color: #2B2B2B;
-		font-size: 20px;
-		font-weight: 200;
-		font-family: 'Roboto', sans-serif;
-	}
-
-	
 	.formarea {
 		margin-left: 30px;
-		text-align: center;
 	}
 	
+	.buttonarea {
 	
+		margin-top: 20px;
+	}
 </style>
 </head>
 <body>
@@ -67,17 +45,13 @@
 	<h1>学生情報</h1>
 </header>
 <form class="formarea" method="get" action="select">
-	<div class="menu_style">
-	<div class="textbox">
-		<input class="text" type="text" name ="keyword">
-		<button type="submit" name="submit" value="searchk">漢字検索</button>
-	</div>
-	<div class="textbox">
-		<input class="text1" type="text" name ="keywordh">
-		<button type="submit" name="submit1" value="searchh">かな検索</button>
-	</div>
+	<button type="submit" name="submit" value="syosai">詳細表示</button>
 	
-	</div>
+	<input type="text" name ="keyword">
+	<button type="submit" name="submit" value="searchk">漢字検索</button>
+	<input type="text" name ="keyword">
+	<button type="submit" name="submit" value="searchh">ひらがな検索</button>
+	
 	<table>
 		<tr>
 			<th>選択</th>

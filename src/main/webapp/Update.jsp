@@ -61,7 +61,7 @@
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>在籍状態確定日<input type="date" name="joutaiday" value="<%=bean.getKakuteibi()%>"></p></th>
+			<th><p>在籍状態確定日<input type="text" name="joutaiday" value="<%=bean.getKakuteibi()%>"></p></th>
 			<th></th>
 		</tr>
 		<tr>

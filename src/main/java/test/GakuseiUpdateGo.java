@@ -33,7 +33,7 @@ public class GakuseiUpdateGo extends HttpServlet {
 		}
 
 		//--- エラーメッセージを格納する配列
-		List<String> list = new ArrayList();
+		List<String> list = new ArrayList<String>();
 
 		//--- フォームデータの取得
 		GakuseiDataBean bean = new GakuseiDataBean();

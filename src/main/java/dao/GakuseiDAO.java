@@ -20,7 +20,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 		con = conn(); // --- スーパークラスのデータベース接続部分を呼び出す。connという変数を利用して参照できる。
 	}
 	
-	public List<GakuseiDataBean> getAllData(int page, String keyword) {
+	public List<GakuseiDataBean> getAllData(int page, String keyword, String keywordh) {
 		List<GakuseiDataBean> data = new ArrayList<GakuseiDataBean>();
 		try {
 			if(keyword == null || keyword == "") {
@@ -72,6 +72,9 @@ public class GakuseiDAO extends Conng implements Serializable {
 				b.setHogosya_mail(hogosya_mail);
 				data.add(b);
 			}
+			
+			
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 			data = null;
@@ -82,7 +85,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 	public List<GakuseiDataBean> getData(String keyword) {
 		List<GakuseiDataBean> data = new ArrayList<GakuseiDataBean>();
 		try {
-			String sql = "select * from team_c_db.gakusei_master where gakusei_name \n"
+			String sql = "select * from team_c_db.gakusei_master where gakusei_name "
 					+ " like ? or gakusei_nameH like ? ";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, "%" + keyword + "%");
