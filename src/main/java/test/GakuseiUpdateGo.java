@@ -165,7 +165,7 @@ public class GakuseiUpdateGo extends HttpServlet {
 
 		//--- 結果表示のjspへ遷移
 		request.setAttribute("message", list);
-		request.getRequestDispatcher("sampleUpdateGo.jsp").forward(request, response);
+		request.getRequestDispatcher("UpdateGo.jsp").forward(request, response);
 	}
 
 }

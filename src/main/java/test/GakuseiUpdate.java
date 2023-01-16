@@ -45,7 +45,7 @@ public class GakuseiUpdate extends HttpServlet {
 		} else {
 			// --- 更新用フォームを呼び出す
 			request.setAttribute("data", bean);
-			request.getRequestDispatcher("sampleUpdate.jsp").forward(request, response);
+			request.getRequestDispatcher("Update.jsp").forward(request, response);
 		}
 	}
 

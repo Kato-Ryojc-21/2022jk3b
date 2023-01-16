@@ -172,7 +172,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 					+ "kakuteibi=?, gakusei_name=?, gakusei_nameH=?, born=?, "
 					+ "yuubinnbanngou=?, gakusei_juusyo=?, "
 					+ "gakusei_phone=?, gakusei_mail=?, hogosya_name=?, "
-					+ "hogosya_nameH=?, hogosya_yuubinnbangou=?, "
+					+ "hogosya_nameH=?, hogosya_yuubinnbanngou=?, "
 					+ "hogosya_juusyo=?, hogosya_phone=?, hogosya_mail=? "
 					+ "where id=?"; // SQL文
 			PreparedStatement st = con.prepareStatement(sql); // プリペアドステートメント
