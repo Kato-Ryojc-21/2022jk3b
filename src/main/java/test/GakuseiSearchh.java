@@ -28,10 +28,10 @@ public class GakuseiSearchh extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 
 		try {
-			String keyword = request.getParameter("keywordh");
+			String keywordh = request.getParameter("keywordh");
 			List<GakuseiDataBean> b = new ArrayList<GakuseiDataBean>();
 			GakuseiDAO sb = new GakuseiDAO();
-			b = sb.getData(keyword);
+			b = sb.getData(keywordh);
 			
 			for (GakuseiDataBean x : b) {
 				response.getWriter().print(x.getId() + "," + x.getGakusei_name() + "," + x.getGakusei_nameH() + "<br>");

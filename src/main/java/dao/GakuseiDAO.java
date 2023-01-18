@@ -26,12 +26,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 			if(keyword == null || keyword == "") {
 				keyword = "";
 			}
-			String sql = "select * from gakusei_master where gakusei_name like ? limit ?,?";
+			String sql = "select * from gakusei_master where gakusei_name like ? or gakusei_nameH like ? limit ?,?";
 			PreparedStatement st = con.prepareStatement(sql);
 			int baseRow = (page - 1) * MAXROW;
 			st.setString(1, "%" + keyword + "%");
-			st.setInt(2, baseRow);
-			st.setInt(3, MAXROW);
+			st.setString(2, "%" + keyword + "%");
+			st.setInt(3, baseRow);
+			st.setInt(4, MAXROW);
 			System.out.println(st.toString());
 			ResultSet rs = st.executeQuery(); // -
 
