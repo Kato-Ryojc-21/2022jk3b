@@ -73,7 +73,7 @@
 			<th><p>保護者氏名（かな）<input type="text" name="oyasimeih" value="<%=bean.getHogosya_nameH() %>"></p></th>
 		</tr>
 		<tr>
-			<th><p>生年月日<input type="number" name="birthday" value="<%=bean.getBorn() %>"></p></th>
+			<th><p>生年月日<input type="text" name="birthday" value="<%=bean.getBorn() %>"></p></th>
 			<th> </th>
 		</tr>
 		<tr>

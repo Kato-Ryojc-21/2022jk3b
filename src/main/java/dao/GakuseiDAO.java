@@ -171,13 +171,13 @@ public class GakuseiDAO extends Conng implements Serializable {
 	public int updateData(GakuseiDataBean bean) {
 		int result = -1;
 		try {
-			String sql = "update gakusei_master set joutai=?"
-					+ " kakuteibi=? gakusei_name=? gakusei_nameH=?"
-					+ " born=? yuubinnbanngou=? gakusei_juusyo=?"
-					+ " gakusei_phone=? gakusei_mail=? hogosya_name=?"
-					+ " hogosya_nameH=? hogosya_yuubinnbangou=?"
-					+ " hogosya_juusyo=? hogosya_phone=? hogosya_mail=?"
-					+ " where id=?"; // SQL文
+			String sql = "UPDATE team_c_db.gakusei_master SET joutai = ? ,"
+					+ " kakuteibi = ? , gakusei_name = ? , gakusei_nameH = ?, "
+					+ " born = ? , yuubinnbanngou = ?, gakusei_juusyo = ?,"
+					+ " gakusei_phone = ?, gakusei_mail = ?, hogosya_name = ?,"
+					+ " hogosya_nameH = ?, hogosya_yuubinnbangou = ?,"
+					+ " hogosya_juusyo = ?, hogosya_phone = ?, hogosya_mail = ?"
+					+ " where id = ?"; // SQL文
 			PreparedStatement st = con.prepareStatement(sql); // プリペアドステートメント
 			st.setString(1, bean.getJoutai());
 			st.setString(2, bean.getKakuteibi());
