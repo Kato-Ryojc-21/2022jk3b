@@ -24,7 +24,10 @@ public class GakuseiSelect extends HttpServlet {
 
 		String proc = request.getParameter("submit");
 		if (proc != null) {
-			if (proc.equals("update")) {
+			if (proc.equals("insert")) {
+				response.sendRedirect("Insert.html");
+				return;
+			}else if (proc.equals("update")) {
 				request.getRequestDispatcher("update").forward(request, response);
 				return;
 			} else if(proc.equals("search")) {
