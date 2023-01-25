@@ -76,19 +76,19 @@ public class GakuseiUpdateGo extends HttpServlet {
 
 		//---　氏名の設定（エラーチェックもする）
 		if (strGakusei_name == null || strGakusei_name.isEmpty()) {
-			list.add("学生氏名の値が未設定になっています");
+			list.add("学生氏名が未設定になっています");
 		} else {
 			bean.setGakusei_name(strGakusei_name);
 		}
 		
 		if (strGakusei_nameH == null || strGakusei_nameH.isEmpty()) {
-			list.add("学生氏名のふりがなの値が未設定になっています");
+			list.add("学生氏名のふりがなが未設定になっています");
 		} else {
 			bean.setGakusei_nameH(strGakusei_nameH);
 		}
 		
 		if (strBorn == null || strBorn.isEmpty()) {
-			list.add("生年月日の値が未設定になっています");
+			list.add("生年月日が未設定になっています");
 		} else {
 			bean.setBorn(strBorn);
 		}
@@ -100,25 +100,19 @@ public class GakuseiUpdateGo extends HttpServlet {
 		}
 		
 		if (strHogosya_juusyo == null || strGakusei_juusyo.isEmpty()) {
-			list.add("本人住所の値が未設定になっています");
+			list.add("本人住所が未設定になっています");
 		} else {
 			bean.setGakusei_juusyo(strGakusei_juusyo);
 		}
 		
 		if (strHogosya_phone == null || strGakusei_phone.isEmpty()) {
-			list.add("本人電話番号の値が未設定になっています");
+			list.add("本人電話番号が未設定になっています");
 		} else {
 			bean.setGakusei_phone(strGakusei_phone);
 		}
 		
-		if (strGakusei_mail == null || strGakusei_mail.isEmpty()) {
-			list.add("本人メールアドレスの値が未設定になっています");
-		} else {
-			bean.setGakusei_mail(strGakusei_mail);
-		}
-		
 		if (strHogosya_name == null || strHogosya_name.isEmpty()) {
-			list.add("保護者氏名の値が未設定になっています");
+			list.add("保護者氏名が未設定になっています");
 		} else {
 			bean.setHogosya_name(strHogosya_name);
 		}
@@ -147,11 +141,6 @@ public class GakuseiUpdateGo extends HttpServlet {
 			bean.setHogosya_phone(strHogosya_phone);
 		}
 		
-		if (strHogosya_mail == null || strHogosya_mail.isEmpty()) {
-			list.add("保護者メールアドレスの値が未設定になっています");
-		} else {
-			bean.setHogosya_mail(strHogosya_mail);
-		}
 
 		//--- DAOのupdatedataを呼び出す
 		if (list.size() == 0) {

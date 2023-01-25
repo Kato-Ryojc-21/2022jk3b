@@ -61,36 +61,36 @@
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>在籍状態確定日<input type="text" name="joutaiday" value="<%=bean.getKakuteibi()%>"></p></th>
+			<th><p>在籍状態確定日<input type="text" name="kakuteibi" value="<%=bean.getKakuteibi()%>"></p></th>
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>学生氏名（漢字） : <input type="text" name="simei" value="<%=bean.getGakusei_name() %>"></p></th>
-			<th><p>保護者氏名（漢字）<input type="text" name="oyasimei" value="<%=bean.getHogosya_name() %>"></p></th>
+			<th><p>学生氏名（漢字） : <input type="text" name="gakusei_name" value="<%=bean.getGakusei_name() %>"></p></th>
+			<th><p>保護者氏名（漢字）<input type="text" name="hogosya_name" value="<%=bean.getHogosya_name() %>"></p></th>
 		</tr>
 		<tr>
-			<th><p>氏名 : <input type="text" name="simei" value="<%=bean.getGakusei_nameH() %>"></p></th>
-			<th><p>保護者氏名（かな）<input type="text" name="oyasimeih" value="<%=bean.getHogosya_nameH() %>"></p></th>
+			<th><p>学生氏名（かな） : <input type="text" name="gakusei_nameH" value="<%=bean.getGakusei_nameH() %>"></p></th>
+			<th><p>保護者氏名（かな）<input type="text" name="hogosya_nameH" value="<%=bean.getHogosya_nameH() %>"></p></th>
 		</tr>
 		<tr>
-			<th><p>生年月日<input type="text" name="birthday" value="<%=bean.getBorn() %>"></p></th>
+			<th><p>生年月日<input type="text" name="born" value="<%=bean.getBorn() %>"></p></th>
 			<th> </th>
 		</tr>
 		<tr>
-			<th><p>本人郵便番号<input type="number" name="yuubinbangou" value="<%=bean.getYuubinnbanngou() %>"></p></th>
-			<th><p>保護者郵便番号<input type="number" name="oyayuubinbangou" value="<%=bean.getHogosya_yuubinnbanngou() %>"></p></th>
+			<th><p>本人郵便番号<input type="text" name="yuubinnbanngou" value="<%=bean.getYuubinnbanngou() %>"></p></th>
+			<th><p>保護者郵便番号<input type="text" name="hogosya_yuubinnbanngou" value="<%=bean.getHogosya_yuubinnbanngou() %>"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人住所<input type="text" name="jusyo" value="<%=bean.getGakusei_juusyo()%>"></p></th>
-			<th><p>保護者住所<input type="text" name="oyajusyo" value="<%=bean.getHogosya_juusyo()%>"></p></th>
+			<th><p>本人住所<input type="text" name="gakusei_juusyo" value="<%=bean.getGakusei_juusyo()%>"></p></th>
+			<th><p>保護者住所<input type="text" name="hogosya_juusyo" value="<%=bean.getHogosya_juusyo()%>"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人電話番号<input type="text" name="phone" value="<%=bean.getGakusei_phone()%>"></p></th>
-			<th><p>保護者電話番号<input type="text" name="oyaphone" value="<%=bean.getHogosya_phone()%>"></p></th>
+			<th><p>本人電話番号<input type="text" name="gakusei_phone" value="<%=bean.getGakusei_phone()%>"></p></th>
+			<th><p>保護者電話番号<input type="text" name="hogosya_phone" value="<%=bean.getHogosya_phone()%>"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人メールアドレス<input type="text" name="mail" value="<%=bean.getGakusei_mail()%>"></p></th>
-			<th><p>保護者メールアドレス<input type="text" name="oyamail" value="<%=bean.getHogosya_mail()%>"></p></th>
+			<th><p>本人メールアドレス<input type="text" name="gakusei_mail" value="<%=bean.getGakusei_mail()%>"></p></th>
+			<th><p>保護者メールアドレス<input type="text" name="hogosya_mail" value="<%=bean.getHogosya_mail()%>"></p></th>
 		</tr>
 	</table>
 		<input type="hidden" name="id" value="<%=bean.getId() %>">

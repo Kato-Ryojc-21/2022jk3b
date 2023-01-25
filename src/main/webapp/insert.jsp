@@ -46,6 +46,7 @@
 		}
 	}
 	%>
-	<a href="display"><span class="button">一覧へ戻る</span></a>
+	<a href="Insert.html"><span class="buttom">登録画面へ戻る</span></a>
+	<a href="displayall"><span class="buttom">一覧表示へ戻る</span></a>
 </body>
 </html>

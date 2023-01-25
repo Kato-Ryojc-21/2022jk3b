@@ -44,7 +44,6 @@
 		}
 	}
 	%>
-	
-	<a href="displayall" class="buttonImage">一覧へ戻る</a>
+	<a href="displayall" class="buttonImage">一覧表示へ戻る</a>
 </body>
 </html>

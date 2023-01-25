@@ -70,13 +70,8 @@
 	<div class="menu_style">
 	<div class="textbox">
 		<input class="text" type="text" name ="keyword">
-		<button type="submit" name="submit" value="searchk">漢字検索</button>
+		<button type="submit" name="submit" value="searchk">検索</button>
 	</div>
-	<div class="textbox">
-		<input class="text1" type="text" name ="keywordh">
-		<button type="submit" name="submit1" value="searchh">かな検索</button>
-	</div>
-	
 	</div>
 	<table>
 		<tr>

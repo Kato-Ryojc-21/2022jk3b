@@ -169,6 +169,58 @@ public class GakuseiDAO extends Conng implements Serializable {
 		return data;
 	}
 	
+	public int insertData(GakuseiDataBean bean) {
+		int result = -1;
+		try {
+			String sql = "insert into team_c_db.gakusei_master(id, joutai, kakuteibi, gakusei_name, gakusei_nameH, "
+					+" born, yuubinnbanngou, gakusei_juusyo, gakusei_phone, gakusei_mail, hogosya_name, hogosya_nameH, "
+					+ "hogosya_yuubinnbanngou, hogosya_juusyo, hogosya_phone, hogosya_mail) "
+					+ "values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setInt(1, bean.getId());
+			st.setString(2, bean.getJoutai());
+			st.setString(3, bean.getKakuteibi());
+			st.setString(4, bean.getGakusei_name());
+			st.setString(5, bean.getGakusei_nameH());
+			st.setString(6, bean.getBorn());
+			st.setString(7, bean.getYuubinnbanngou());
+			st.setString(8, bean.getGakusei_juusyo());
+			st.setString(9, bean.getGakusei_phone());
+			st.setString(10, bean.getGakusei_mail());
+			st.setString(11, bean.getHogosya_name());
+			st.setString(12, bean.getHogosya_nameH());
+			st.setString(13, bean.getHogosya_yuubinnbanngou());
+			st.setString(14, bean.getHogosya_juusyo());
+			st.setString(15, bean.getHogosya_phone());
+			st.setString(16, bean.getHogosya_mail());
+			result = st.executeUpdate();// 変更されたレコード数を受け取る
+		} catch(Exception e){
+			e.printStackTrace();
+			result = 0;// 失敗した時は変更されたレコード数を0にする
+		}
+		return result;
+	}
+	
+	/*public boolean isExists(String id) {
+		GakuseiDataBean data = new GakuseiDataBean(); // 返却するデータ
+		boolean result = false;      // 結果を返却する変数(存在しない)
+		try {
+		    String sql = "select count(*) from sample where id=?";
+		    PreparedStatement st = con.prepareStatement(sql);
+		    st.setInt(1, Integer.parseInt(id));
+		    ResultSet rs = st.executeQuery();
+		    rs.next();                   // 最初のレコードの位置へ移動
+		    //--- 結果を取り出して判断する
+		    if (rs.getInt(1) == 1) {
+		    	result = true;  // データが存在するのでtrueを返却
+		    }
+		} catch (Exception e) {
+		    e.printStackTrace(); // しくじった時は念のためトレース表示
+		    result = true;  // 何かのエラーがあったので登録できないようにtrue返す
+		}
+		return result;
+	}*/
+	
 	public int updateData(GakuseiDataBean bean) {
 		int result = -1;
 		try {
@@ -176,7 +228,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 					+ " kakuteibi = ? , gakusei_name = ? , gakusei_nameH = ?, "
 					+ " born = ? , yuubinnbanngou = ?, gakusei_juusyo = ?,"
 					+ " gakusei_phone = ?, gakusei_mail = ?, hogosya_name = ?,"
-					+ " hogosya_nameH = ?, hogosya_yuubinnbangou = ?,"
+					+ " hogosya_nameH = ?, hogosya_yuubinnbanngou = ?,"
 					+ " hogosya_juusyo = ?, hogosya_phone = ?, hogosya_mail = ?"
 					+ " where id = ?"; // SQL文
 			PreparedStatement st = con.prepareStatement(sql); // プリペアドステートメント
