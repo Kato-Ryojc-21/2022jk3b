@@ -34,8 +34,8 @@ public class Gakuseidisplay extends HttpServlet {
 				page=1;
 			}
 		}
-		String keywordh = (String) request.getParameter("keywordh");
-		if (keywordh == null) {
+		String keywordh = request.getParameter("keywordh");
+		if(keywordh == null) {
 			keywordh = "";
 		}
 		
@@ -54,7 +54,7 @@ public class Gakuseidisplay extends HttpServlet {
 		request.setAttribute("allpage", dao.getMaxPage(keyword));
 		// キーワードを送る
 		request.setAttribute("keyword", keyword);
-		request.setAttribute("keywordh", keywordh);
+		request.setAttribute("key", keywordh);
 		// jspに遷移
 		request.getRequestDispatcher("displayall.jsp").forward(request, response);
 	}

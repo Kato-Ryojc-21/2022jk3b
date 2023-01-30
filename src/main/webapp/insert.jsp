@@ -3,15 +3,25 @@
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
 	a {
 		text-decoration: none;
+	}
+	
+	a.tou{
+		border: 1px solid #ccc;
+		padding: 10px;
+		background-color: 192,192,192;
+	}
+	
+	a.iti{
+		border: 1px solid #ccc;
+		padding: 10px;
+		background-color: 192,192,192;
 	}
 	
 	.buttonImage {
@@ -46,7 +56,7 @@
 		}
 	}
 	%>
-	<a href="Insert.html"><span class="buttom">登録画面へ戻る</span></a>
-	<a href="displayall"><span class="buttom">一覧表示へ戻る</span></a>
+	<a href="Insert.html" class="tou"><span class="buttom">登録画面へ戻る</span></a>
+	<a href="displayall" class="iti"><span class="buttom">一覧表示へ戻る</span></a>
 </body>
 </html>

@@ -26,13 +26,14 @@ public class GakuseiDAO extends Conng implements Serializable {
 			if(keyword == null || keyword == "") {
 				keyword = "";
 			}
-			String sql = "select * from gakusei_master where gakusei_name like ? or gakusei_nameH like ? limit ?,?";
+			String sql = "select * from gakusei_master where gakusei_name like ? or gakusei_nameH like ? or id = ? limit ?,?";
 			PreparedStatement st = con.prepareStatement(sql);
 			int baseRow = (page - 1) * MAXROW;
 			st.setString(1, "%" + keyword + "%");
 			st.setString(2, "%" + keyword + "%");
-			st.setInt(3, baseRow);
-			st.setInt(4, MAXROW);
+			st.setString(3, keyword);
+			st.setInt(4, baseRow);
+			st.setInt(5, MAXROW);
 			System.out.println(st.toString());
 			ResultSet rs = st.executeQuery(); // -
 
@@ -87,10 +88,11 @@ public class GakuseiDAO extends Conng implements Serializable {
 		List<GakuseiDataBean> data = new ArrayList<GakuseiDataBean>();
 		try {
 			String sql = "select * from team_c_db.gakusei_master where gakusei_name "
-					+ " like ? or gakusei_nameH like ? ";
+					+ " like ? or gakusei_nameH like ? or id = ?";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, "%" + keyword + "%");
 			st.setString(2, "%" + keyword + "%");
+			st.setString(3, keyword);
 			ResultSet rs = st.executeQuery();
 			
 			while (rs.next()) {
@@ -202,7 +204,7 @@ public class GakuseiDAO extends Conng implements Serializable {
 		return data;
 	}
 	
-<<<<<<< HEAD
+
 	public int insertData(GakuseiDataBean bean) {
 		int result = -1;
 		try {
@@ -254,33 +256,12 @@ public class GakuseiDAO extends Conng implements Serializable {
 		}
 		return result;
 	}*/
-=======
-	// ----- 引数のidが存在すればture、存在しなければfalseを返す
-		public boolean isExists(String id) {
-			GakuseiDataBean data = new GakuseiDataBean();
-			boolean result = false; // 結果を返却する変数（存在しない）
-			try {
-				String sql = "select count(*) from gakusei_master where id=?";
-				PreparedStatement st = con.prepareStatement(sql);
-				st.setInt(1, Integer.parseInt(id));
-				ResultSet rs = st.executeQuery();
-				rs.next(); // 最初のレコードの位置へ移動
-				// --- 結果を取り出して判断する
-				if (rs.getInt(1) == 1) {
-					result = true; // データが存在するのでtrueを返却
-				}
-			} catch (Exception e) {
-				e.printStackTrace(); // しくじった時は念のためトレース表示
-				result = true; // 何かのエラーがあったので登録できないようにtrueを返す
-			}
-			return result;
-		}
->>>>>>> refs/remotes/origin/master
+
 	
 	public int updateData(GakuseiDataBean bean) {
 		int result = -1;
 		try {
-<<<<<<< HEAD
+
 			String sql = "UPDATE team_c_db.gakusei_master SET joutai = ? ,"
 					+ " kakuteibi = ? , gakusei_name = ? , gakusei_nameH = ?, "
 					+ " born = ? , yuubinnbanngou = ?, gakusei_juusyo = ?,"
@@ -288,15 +269,6 @@ public class GakuseiDAO extends Conng implements Serializable {
 					+ " hogosya_nameH = ?, hogosya_yuubinnbanngou = ?,"
 					+ " hogosya_juusyo = ?, hogosya_phone = ?, hogosya_mail = ?"
 					+ " where id = ?"; // SQL文
-=======
-			String sql = "update gakusei_master set joutai=?, "
-					+ "kakuteibi=?, gakusei_name=?, gakusei_nameH=?, born=?, "
-					+ "yuubinnbanngou=?, gakusei_juusyo=?, "
-					+ "gakusei_phone=?, gakusei_mail=?, hogosya_name=?, "
-					+ "hogosya_nameH=?, hogosya_yuubinnbanngou=?, "
-					+ "hogosya_juusyo=?, hogosya_phone=?, hogosya_mail=? "
-					+ "where id=?"; // SQL文
->>>>>>> refs/remotes/origin/master
 			PreparedStatement st = con.prepareStatement(sql); // プリペアドステートメント
 			st.setString(1, bean.getJoutai());
 			st.setString(2, bean.getKakuteibi());

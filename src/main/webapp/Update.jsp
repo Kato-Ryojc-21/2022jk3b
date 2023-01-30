@@ -53,7 +53,7 @@
 			<th>保護者用</th>
 		</tr>
 		<tr>
-			<th><p>学生番号 : <%=bean.getId() %></p></th>
+			<th><p>学生番号<%=bean.getId() %></p></th>
 			
 		</tr>
 		<tr>
@@ -65,11 +65,11 @@
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>学生氏名（漢字） : <input type="text" name="gakusei_name" value="<%=bean.getGakusei_name() %>"></p></th>
+			<th><p>学生氏名（漢字）<input type="text" name="gakusei_name" value="<%=bean.getGakusei_name() %>"></p></th>
 			<th><p>保護者氏名（漢字）<input type="text" name="hogosya_name" value="<%=bean.getHogosya_name() %>"></p></th>
 		</tr>
 		<tr>
-			<th><p>学生氏名（かな） : <input type="text" name="gakusei_nameH" value="<%=bean.getGakusei_nameH() %>"></p></th>
+			<th><p>学生氏名（かな）<input type="text" name="gakusei_nameH" value="<%=bean.getGakusei_nameH() %>"></p></th>
 			<th><p>保護者氏名（かな）<input type="text" name="hogosya_nameH" value="<%=bean.getHogosya_nameH() %>"></p></th>
 		</tr>
 		<tr>
