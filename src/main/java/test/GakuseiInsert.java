@@ -92,10 +92,7 @@ public class GakuseiInsert extends HttpServlet {
 			message.add("電話番号が入力されていません");
 			errSw = true;
 		}
-		if (strGakusei_mail == null || strGakusei_mail == "") {
-			message.add("メールアドレスが入力されていません");
-			errSw = true;
-		}
+		
 		if (strHogosya_name == null || strHogosya_name == "") {
 			message.add("保護者の氏名が入力されていません");
 			errSw = true;
@@ -116,15 +113,12 @@ public class GakuseiInsert extends HttpServlet {
 			message.add("保護者の電話番号が入力されていません");
 			errSw = true;
 		}
-		if (strHogosya_mail == null || strHogosya_mail == "") {
-			message.add("保護者のメールアドレスが入力されていません");
-			errSw = true;
-		}
+		
 		// --- 送信されたデータにエラーが無ければ登録する
 		if (!errSw) {
 			GakuseiDAO dao = new GakuseiDAO();
 			// --- insertDataは追加したレコード数を返すので0かどうかで成功か判断する
-			if (!dao.isExists(strId)) {
+			//if (!dao.isExists(strId)) {
 				GakuseiDataBean bean = new GakuseiDataBean();
 				bean.setId(id);
 				bean.setJoutai(strJoutai);
@@ -152,7 +146,7 @@ public class GakuseiInsert extends HttpServlet {
 				message.add("IDが重複しています。");
 			}
 
-		}
+		//}
 
 		// --- メッセージ表示用のjspへの遷移
 		request.setAttribute("message", message);

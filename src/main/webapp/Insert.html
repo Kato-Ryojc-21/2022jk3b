@@ -43,40 +43,46 @@
 			
 		</tr>
 		<tr>
-			<th><p>在籍状態<input type="text" name="joutai"></p></th>
+			<th><p>在籍状態<select name="joutai">
+					<option>在学</option>
+					<option>休学</option>
+					<option>退学</option>
+					<option>除籍</option>
+					</select>
+			</p></th>
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>在籍状態確定日<input type="date" name="joutaiday"></p></th>
+			<th><p>在籍状態確定日<input type="text" name="kakuteibi"></p></th>
 			<th></th>
 		</tr>
 		<tr>
-			<th><p>学生氏名（漢字）<input type="text" name="simei"></p></th>
-			<th><p>保護者氏名（漢字）<input type="text" name="oyasimei"></p></th>
+			<th><p>学生氏名（漢字）<input type="text" name="gakusei_name"></p></th>
+			<th><p>保護者氏名（漢字）<input type="text" name="hogosya_name"></p></th>
 		</tr>
 		<tr>
-			<th><p>学生氏名（かな）<input type="text" name="simeih"></p></th>
-			<th><p>保護者氏名（かな）<input type="text" name="oyasimeih"></p></th>
+			<th><p>学生氏名（かな）<input type="text" name="gakusei_nameH"></p></th>
+			<th><p>保護者氏名（かな）<input type="text" name="hogosya_nameH"></p></th>
 		</tr>
 		<tr>
-			<th><p>生年月日<input type="number" name="birthday"></p></th>
+			<th><p>生年月日<input type="text" name="born"></p></th>
 			<th> </th>
 		</tr>
 		<tr>
-			<th><p>本人郵便番号<input type="number" name="yuubinbangou"></p></th>
-			<th><p>保護者郵便番号<input type="number" name="oyayuubinbangou"></p></th>
+			<th><p>本人郵便番号<input type="text" name="yuubinnbanngou"></p></th>
+			<th><p>保護者郵便番号<input type="text" name="hogosya_yuubinnbanngou"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人住所<input type="text" name="jusyo"></p></th>
-			<th><p>保護者住所<input type="text" name="oyajusyo"></p></th>
+			<th><p>本人住所<input type="text" name="gakusei_juusyo"></p></th>
+			<th><p>保護者住所<input type="text" name="hogosya_juusyo"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人電話番号<input type="text" name="phone"></p></th>
-			<th><p>保護者電話番号<input type="text" name="oyaphone"></p></th>
+			<th><p>本人電話番号<input type="text" name="gakusei_phone"></p></th>
+			<th><p>保護者電話番号<input type="text" name="hogosya_phone"></p></th>
 		</tr>
 		<tr>
-			<th><p>本人メールアドレス<input type="text" name="mail"></p></th>
-			<th><p>保護者メールアドレス<input type="text" name="oyamail"></p></th>
+			<th><p>本人メールアドレス<input type="text" name="gakusei_mail"></p></th>
+			<th><p>保護者メールアドレス<input type="text" name="hogosya_mail"></p></th>
 		</tr>
 	</table>
 	<button type="submit">送信</button>

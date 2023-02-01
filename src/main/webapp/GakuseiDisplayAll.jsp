@@ -69,8 +69,8 @@ th, td {
 					<td><input type="radio" name="id" value="<%=bean.getId()%>"
 						id="radio<%=cnt%>"></td>
 					<td><label for="radio<%=cnt%>"><%=bean.getId()%></label></td>
-					<td><label for="radio<%=cnt%>"><%=bean.getGakusei_name()%></td>
-					<td><label for="radio<%=cnt%>"><%=bean.getGakusei_nameH()%></td>
+					<td><label for="radio<%=cnt%>"><%=bean.getGakusei_name()%></label></td>
+					<td><label for="radio<%=cnt%>"><%=bean.getGakusei_nameH()%></label></td>
 				</tr>
 				<%
 				}

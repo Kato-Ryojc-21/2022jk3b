@@ -30,7 +30,7 @@ public class GakuseiDataBean implements Serializable{
 		this.joutai =joutai;
 	}
 	
-	public void setKakuteibi(String kakuteibi) {
+	public void setKakuteibi(String  kakuteibi) {
 		this.kakuteibi =kakuteibi;
 	}
 	
