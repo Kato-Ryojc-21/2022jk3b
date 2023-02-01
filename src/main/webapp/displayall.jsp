@@ -13,6 +13,7 @@
 
 <title>一覧</title>
 <style>
+
 	body{
 		background-color: white;
 	}
@@ -100,7 +101,7 @@
 		float: reft;
 	}
 	
-	/*.textBox {
+	.textBox {
 		position: relative;
 		width: 100%;
 		padding-top: 10px;
@@ -115,7 +116,7 @@
 		font-weight: 200;
 		font-family: 'Roboto', sans-serif;
 	}
-	*/
+	
 	
 	.formarea {
 		margin-left: 25px;
@@ -129,6 +130,7 @@
 <header>
 	<h1>学生情報</h1>
 </header>
+<div id="particles-js">
 <form class="formarea" method="get" action="select">
 	<div class="menu_style">
 	<div class="textbox">
@@ -149,6 +151,7 @@
 		//-----受け取ったデータをテーブルに表示する
 		List<GakuseiDataBean> data = (ArrayList) request.getAttribute("data");
 		for (GakuseiDataBean bean : data) {
+			cnt++;
 		%>
 		<tr>
 			<td><input type="radio" name="id" value="<%= bean.getId()%>" id ="radio<%= cnt %>"></td>
@@ -229,5 +232,6 @@
 		<button type="submit" name="submit" value="insert" class="btn03 pushdown">新規登録</button>
 	</div>
 </form>
+</div>
 </body>
 </html>
