@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-1/css/7-2-1.css">
@@ -114,7 +113,7 @@
 		color: #2B2B2B;
 		font-size: 20px;
 		font-weight: 200;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto; sans-serif;
 	}
 	
 	
@@ -130,7 +129,6 @@
 <header>
 	<h1>学生情報</h1>
 </header>
-<div id="particles-js">
 <form class="formarea" method="get" action="select">
 	<div class="menu_style">
 	<div class="textbox">
@@ -232,6 +230,5 @@
 		<button type="submit" name="submit" value="insert" class="btn03 pushdown">新規登録</button>
 	</div>
 </form>
-</div>
 </body>
 </html>
