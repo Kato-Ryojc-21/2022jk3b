@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
 <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-1/css/7-2-1.css">
 
 <title>一覧</title>
 <style>
+
 	body{
 		background-color: white;
 	}
@@ -100,7 +100,7 @@
 		float: reft;
 	}
 	
-	/*.textBox {
+	.textBox {
 		position: relative;
 		width: 100%;
 		padding-top: 10px;
@@ -113,9 +113,9 @@
 		color: #2B2B2B;
 		font-size: 20px;
 		font-weight: 200;
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto; sans-serif;
 	}
-	*/
+	
 	
 	.formarea {
 		margin-left: 25px;
@@ -149,6 +149,7 @@
 		//-----受け取ったデータをテーブルに表示する
 		List<GakuseiDataBean> data = (ArrayList) request.getAttribute("data");
 		for (GakuseiDataBean bean : data) {
+			cnt++;
 		%>
 		<tr>
 			<td><input type="radio" name="id" value="<%= bean.getId()%>" id ="radio<%= cnt %>"></td>

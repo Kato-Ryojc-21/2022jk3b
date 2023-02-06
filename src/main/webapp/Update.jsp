@@ -57,7 +57,14 @@
 			
 		</tr>
 		<tr>
-			<th><p>在籍状態<input type="text" name="joutai" value="<%=bean.getJoutai()%>"></p></th>
+			<th><p>在籍状態<select name="joutai">
+					<option><%=bean.getJoutai()%></option>
+					<option>在学</option>
+					<option>休学</option>
+					<option>退学</option>
+					<option>除籍</option>
+					</select>
+			</p></th>
 			<th></th>
 		</tr>
 		<tr>
