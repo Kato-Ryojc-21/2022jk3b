@@ -12,18 +12,24 @@
 		padding: 0.5em;/*文字周りの余白*/
 		color: #010101;/*文字色*/
 		background: #fff3ff;
+		text-align: center;
 	}
 	table {
+		margin: 3px auto;
 		border-collapse: collapse;
-		background-color: #cdefff;
+		background-color: #cdeffd;
+		table-layout: fixed;
+		width:  50%;
 	}
 	
 	table, th, td {
 		border: solid 1px #000000;
+		margin: auto;
+		padding: 7px;
 	}
 	
 	th, td {
-		padding: 5px;
+		width:  100%;
 	}
 	
 	p{
@@ -32,6 +38,27 @@
 	
 	.button{
 		margin-top: 20px;
+	}
+	
+	.formarea {
+		margin-left: 25px;
+		text-align: center;
+	}
+	
+	.btn03{
+		border: 1px solid #ccc;
+		background: #f1e767;
+		background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+		background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+		background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+		-webkit-box-shadow: inset 1px 1px 1px #fff;
+		box-shadow: inset 1px 1px 1px #fff;
+	}
+
+	.btn03:hover {
+		background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+		background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+		background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
 	}
 	
 </style>
@@ -46,7 +73,7 @@
 	}
 	%>
 	<h1>データ編集ページ</h1>
-	<form method="get" action="updatego">
+	<form class="formarea" method="get" action="updatego">
 	<table>
 		<tr>
 			<th>学生用</th>
@@ -102,9 +129,9 @@
 	</table>
 		<input type="hidden" name="id" value="<%=bean.getId() %>">
 		<div class="button">
-			<button type="submit" name="submit" value="1">変更</button>
-			<button type="submit" name="submit" value="2">キャンセル</button>
-			<button type="reset">リセット</button>
+			<button type="submit" name="submit" value="1" class="btn03 pushdown">変更</button>
+			<button type="submit" name="submit" value="2" class="btn03 pushdown">キャンセル</button>
+			<button type="reset" class="btn03">リセット</button>
 		</div>
 	</form>
 </body>
