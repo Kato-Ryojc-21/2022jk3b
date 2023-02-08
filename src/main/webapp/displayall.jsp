@@ -12,11 +12,101 @@
 
 <title>一覧</title>
 <style>
-
+	.box {
+            width: 100%; /*外枠のサイズ*/
+            height: 100%; /*外枠のサイズ*/
+            background: white; /*背景、白っぽいところ*/
+            position: relative; /*基準にする*/
+            -webkit-transform: translate3d(0, 0, 0);
+              /*macのsafariとchrome対応、要素を3D空間内で再配置　原点　がたつき補正？*/
+            transform: translate3d(0, 0, 0);
+              /*要素を3D空間内で再配置　原点　がたつきの補正？*/
+        }
+        
+        .wave { /*三つの波すべてに適応する条件、oneはこれのみ適応*/
+            opacity: .4; /*少し透明にする（1で不透明：初期値）*/
+            position: absolute; /*.boxを基準として絶対配置する*/
+            top: 1px;
+              /*波（を表す円）の位置調整
+                親要素のサイズを大きくすると（600pxとか）位置が確認しやすい*/
+            left: 50%; /*縦軸から見てセンターに波（を表す円）を配置*/
+            background: #0af; /*青い部分、波（を表す円）の色*/
+            width: 1600px; /*波（を表す円）のサイズ*/
+            height: 1600px; /*同上*/
+            margin-left: -800px; /*波（を表す円）の位置を縦軸から見てセンターに配置*/
+            margin-top: -800px; /*波（を表す円）の位置を上半分に配置*/
+            -webkit-transform-origin: 50% 48%;
+              /*macのsafariとchrome対応　2D
+                円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
+            transform-origin: 50% 48%;
+              /*2D 円の原点 左から50%（x軸）、上からの距離48%（y軸）*/
+            border-radius: 45%; /*ちょっといびつな円にする（100%にすると正円）*/
+            -webkit-animation: drift 3000ms infinite linear;
+              /*safariとchrome対応 キーフレームアニメーション
+          回転　スピード　無限ループ　開始から終了まで一定に変化させる*/
+            animation: drift 3000ms infinite linear;
+            z-index: -1;
+        }
+        
+        .wave.-three { /*三つ目の円の設定*/
+            -webkit-animation: drift 5000ms infinite linear;
+              /*.waveよりも回転速度を上げてずらす*/
+            animation: drift 5000ms infinite linear;
+            z-index: -1;
+        }
+        
+        .wave.-two {
+            -webkit-animation: drift 7000ms infinite linear;
+              /*.wave.-threeよりも回転速度を上げてずらす*/
+            animation: drift 7000ms infinite linear;
+            opacity: .1; /*他の二つの円よりもより透明に*/
+            background: yellow; /*背景色*/
+            z-index: -1;
+        }
+        
+        .box:after { /*.boxの直後に指定する疑似要素*/
+            content: ''; /*文字列は挿入しない*/
+            display: block; /*widthなどを指定できるようにする*/
+            left: 0; /*親要素にぴったり重なる*/
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5)); /*背景のピンクグラデーション*/
+　　　　    z-index: 11; /*他要素（円）よりも上へ*/
+            -webkit-transform: translate3d(0, 0, 0);/*.box同様に3Dで原点指定*/
+            transform: translate3d(0, 0, 0);
+            z-index: -1;
+        }
+        
+        
+        @-webkit-keyframes drift {
+          /*macのsafari、chrome　円の回転のアニメーション設定*/
+            from { /*startの配置*/
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            from { /*360度回転*/
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes drift {
+           /円の回転のアニメーション設定*/
+            from {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            from {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+	
 	body{
 		background-color: white;
 	}
-
+	
 	/*検索窓のエリア*/
 	#search-wrap {
 		margin-left;
@@ -74,11 +164,12 @@
 		padding: 0.5em;/*文字周りの余白*/
 		color: #010101;/*文字色*/
 		background: #fff3ff;
+		
 	}
 	table {
 		margin: 3px auto;
 		border-collapse: collapse;
-		background-color: #cdeffd;
+		background-color: #fff3ff;
 		table-layout: fixed;
 		width:  60%;
 	}
@@ -126,9 +217,13 @@
 </style>
 </head>
 <body>
+<div class="box"><!--外枠、全ての親要素-->
 <header>
 	<h1>学生情報</h1>
 </header>
+   <div class="wave -one"></div><!--二つのクラスを持つ波-->
+   <div class="wave -two"></div><!--二つのクラスを持つ波-->
+   <div class="wave -three"></div><!--二つのクラスを持つ波-->
 <form class="formarea" method="get" action="select">
 	<div class="menu_style">
 	<div class="textbox">
@@ -230,5 +325,6 @@
 		<button type="submit" name="submit" value="insert" class="btn03 pushdown">新規登録</button>
 	</div>
 </form>
+</div>
 </body>
 </html>

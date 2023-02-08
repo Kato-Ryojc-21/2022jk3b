@@ -11,28 +11,37 @@
 		background: #fff3ff;
 	}
 	table {
+		margin: 3px auto;
 		border-collapse: collapse;
-		background-color: #cdefff;
+		background-color: #cdeffd;
+		table-layout: fixed;
+		width:  60%;
 	}
 	
 	table, th, td {
 		border: solid 1px #000000;
+		margin: auto;
+		padding: 7px;
 	}
 	
 	th, td {
-		padding: 5px;
+		width:  100%;
 	}
 	
 	p{
 		text-align: left;
 	}
 	
+	.formarea {
+		margin-left: 25px;
+		text-align: center;
+	}
 	
 </style>
 </head>
 <body>
 	<h1>データ追加ページ</h1>
-	<form method="get" action="insert">
+	<form class="formarea" method="get" action="insert">
 	<table>
 		<tr>
 			<th>学生用</th>
